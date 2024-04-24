@@ -4,15 +4,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
-    entry: './main.js',
+    entry: './src/main.js',
     module: {
 
         rules: [
             {
                 test: /\.css$/i,
                 include: [
-                    path.resolve(__dirname, 'src'),
-                    path.join(__dirname, 'style.css')
+                    path.resolve(__dirname, 'src')
                 ],
                 use: [
                     'style-loader',
@@ -24,11 +23,6 @@ module.exports = {
                     },
                     {
                         loader: "css-loader"
-                        // options: {
-                        //     modules: {
-                        //         localIdentName: '[name]_[local]-[hash:base64:5]',
-                        //     },
-                        // },
                     },
                     'postcss-loader'
                 ],
@@ -45,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html",
+            template: "./src/index.html",
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

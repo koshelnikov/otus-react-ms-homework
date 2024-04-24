@@ -1,4 +1,4 @@
 import 'flowbite';
 import './style.css'
 
-import './src/app'
+import './app/app'
