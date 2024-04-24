@@ -1,7 +1,4 @@
-import 'flowbite';
-import './style.css'
-
-import html from "./index.html";
+import html from "./app.html";
 
 
 function getHelloWorldComponent() {
